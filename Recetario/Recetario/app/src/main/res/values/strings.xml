@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Recetario</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="tvUsuario">Usuario</string>
+    <string name="tvContra">Contraseña</string>
+    <string name="tvRepetirContra">Repetir contraseña</string>
+    <string name="Registro_name">Registro</string>
+    <string name="MisRecetas_name">Mis recetas</string>
+    <string name="Recetas_name">Recetas</string>
+    <string name="tvIrRecetas">Ir a mis recetas</string>
+    <string name="titulo">Título</string>
+    <string name="procedimiento">Procedimiento</string>
+    <string name="guardar">Guardar</string>
+    <string name="calificaci_n">Calificación:</string>
+    <string name="imagen_de_la_receta">Imagen de la receta</string>
+    <string name="ingredientes_">Ingredientes:</string>
+    <string name="procedimiento_">Procedimiento:</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="elegir_imagen">Elegir imagen</string>
+    <string name="editarUsuario">Editar usuario</string>
+    <string name="cerrarSesion">Cerrar sesión</string>
+</resources>

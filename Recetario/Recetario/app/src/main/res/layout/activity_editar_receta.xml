@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevaReceta">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/titulo"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvTitulo"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvProcedimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etTitulo"
+                android:layout_centerHorizontal="true"
+                android:text="@string/procedimiento"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etProcedimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvProcedimiento"
+                android:ems="10"
+                android:inputType="text|textMultiLine"/>
+
+            <TextView
+                android:id="@+id/tvIngredientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etProcedimiento"
+                android:layout_centerHorizontal="true"
+                android:text="Ingredientes"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/llIngredientes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/etTitulo"
+                android:layout_alignLeft="@+id/etTitulo"
+                android:layout_alignEnd="@+id/etTitulo"
+                android:layout_alignRight="@+id/etTitulo"
+                android:layout_below="@id/tvIngredientes"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBotones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/etTitulo"
+                android:layout_alignLeft="@+id/etTitulo"
+                android:layout_alignEnd="@+id/etTitulo"
+                android:layout_alignRight="@+id/etTitulo"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/llIngredientes">
+
+                <Button
+                    android:id="@+id/botonAgregar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:layout_weight="1"
+                    android:onClick="addLine" />
+
+                <Button
+                    android:id="@+id/botonQuitar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Quitar"
+                    android:layout_weight="1"
+                    android:onClick="removeLine" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llBotones"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tcCalificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/calificaci_n"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RatingBar
+                    android:id="@+id/rbCalificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tcCalificacion"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/linear1"
+                android:layout_margin="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/foto_default" />
+
+            <Button
+                android:id="@+id/botonImagen"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/elegir_imagen" />
+
+
+            <Button
+                android:id="@+id/botonGuardar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagen"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/guardar" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
